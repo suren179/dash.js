@@ -1570,6 +1570,30 @@ function MediaPlayer() {
     }
 
     /**
+     * @CISCO
+     * setRetryAttemptsForType : Represents how many retries will be made for a missing segment
+     * @param {String} type
+     * @param {int} value
+     * @memberof module:MediaPlayer
+     * @instance
+     */
+    function setRetryAttemptsForType(type, value) {
+        mediaPlayerModel.setRetryAttemptsForType(type,value);
+    }
+
+    /**
+     * @CISCO
+     * setRetryIntervalForType : Represents time interval after which an attempt will be made for missing segment
+     * @param {String} type
+     * @param {int} value
+     * @memberof module:MediaPlayer
+     * @instance
+     */
+    function setRetryIntervalForType(type, value) {
+        mediaPlayerModel.setRetryIntervalForType(type, value);
+    }
+
+    /**
      * Total number of retry attempts that will occur on a fragment load before it fails.
      * Increase this value to a maximum in order to achieve an automatic playback resume
      * in case of completely lost internet connection.
@@ -2088,6 +2112,8 @@ function MediaPlayer() {
         setBufferTimeAtTopQuality: setBufferTimeAtTopQuality,
         setFragmentLoaderRetryAttempts: setFragmentLoaderRetryAttempts,
         setFragmentLoaderRetryInterval: setFragmentLoaderRetryInterval,
+        setRetryAttemptsForType: setRetryAttemptsForType,
+        setRetryIntervalForType: setRetryIntervalForType,
         setXHRWithCredentials: setXHRWithCredentials,
         setXHRWithCredentialsForType: setXHRWithCredentialsForType,
         getXHRWithCredentialsForType: getXHRWithCredentialsForType,

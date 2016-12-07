@@ -58,6 +58,12 @@ function DashMetrics() {
         return representation.bandwidth;
     }
 
+    /**
+     *
+     */
+    function getManifestAvailabilityStartTime() {
+        return manifestModel.getValue().availabilityStartTime.getTime();
+    }
 
     /**
      *
@@ -382,6 +388,7 @@ function DashMetrics() {
     }
 
     instance = {
+        getManifestAvailabilityStartTime: getManifestAvailabilityStartTime,
         getBandwidthForRepresentation: getBandwidthForRepresentation,
         getIndexForRepresentation: getIndexForRepresentation,
         getMaxIndexForBufferType: getMaxIndexForBufferType,
