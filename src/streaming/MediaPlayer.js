@@ -958,6 +958,14 @@ function MediaPlayer() {
         textSourceBuffer.setTextTrack();
     }
 
+    function getCurrentTextTrackIndex() {
+        let idx = NaN;
+        if (textSourceBuffer) {
+            idx = textSourceBuffer.getCurrentTrackIdx();
+        }
+        return idx;
+    }
+
     /**
      * @param {string} type
      * @returns {Array}
@@ -2127,6 +2135,7 @@ function MediaPlayer() {
         displayCaptionsOnTop: displayCaptionsOnTop,
         attachVideoContainer: attachVideoContainer,
         attachTTMLRenderingDiv: attachTTMLRenderingDiv,
+        getCurrentTextTrackIndex: getCurrentTextTrackIndex,
         reset: reset
     };
 
