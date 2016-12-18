@@ -72,7 +72,7 @@ function MetricSerialiser() {
                         obj.push(isBuiltIn ? v : serialise(v));
                     });
 
-                    value = obj.map(encodeURIComponent).join(',');
+                    value = encodeURIComponent(obj.join(','));
                 } else if (typeof value === 'string') {
                     value = encodeURIComponent(value);
                 } else if (value instanceof Date) {
